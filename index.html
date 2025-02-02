@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko"> 
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Works 설치</title>  
+
+    <!-- ✅ Open Graph 메타 태그 (SNS & 메신저 링크 미리보기) -->
+    <meta property="og:title" content="Wi-Works 앱 설치">
+    <meta property="og:image" content="https://raw.githubusercontent.com/wizione0610/wi-works/main/wiworksOg.jpg">
+    <meta property="og:url" content="https://wizione0610.github.io/wi-works/">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* iOS 스타일 배경색 변경 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 화면 위에서부터 정렬 */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #002e5a; /* 변경된 배경색 */
+            text-align: center;
+        }
+
+        /* Wi-Works 로고 컨테이너 (타이틀과 화면 상단 중간) */
+        .logo-container {
+            position: relative;
+            margin-top: 20vh; /* 화면 높이의 20% 위치에 배치 */
+        }
+
+        .logo-container img {
+            height: 160px; /* 로고 크기 */
+        }
+
+        /* 중간 콘텐츠 컨테이너 */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 수직 중앙 정렬 */
+            align-items: center;
+            flex: 1; /* 화면의 중간 영역을 차지 */
+        }
+
+        /* 다운로드 버튼 스타일 */
+        .download-button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* 왼쪽 정렬 */
+            gap: 12px; /* 로고와 텍스트 사이 간격 */
+            padding: 14px 20px;
+            font-size: 19px;
+            font-weight: bold;
+            text-transform: none; /* 일반적인 문장 스타일 */
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: left;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            width: 240px; /* 버튼 가로 크기 확대 */
+            height: 40px; /* 버튼 높이 */
+            margin: 10px;
+        }
+
+        /* iOS 버튼 (검은색) */
+        .ios-button {
+            background-color: #000000;
+        }
+
+        .ios-button:hover {
+            background-color: #333333;
+            transform: scale(1.05);
+        }
+
+        /* Android 버튼 (초록색) */
+        .android-button {
+            background-color: #34A853;
+        }
+
+        .android-button:hover {
+            background-color: #2B8D44;
+            transform: scale(1.05);
+        }
+
+        /* 애플 & 안드로이드 로고 크기 통일 */
+        .apple-logo,
+        .android-logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* iOS 스타일 타이틀 */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff; /* 텍스트를 흰색으로 변경 */
+        }
+
+        /* 설명 문구 */
+        .description {
+            font-size: 16px;
+            color: #dddddd; /* 밝은 회색으로 변경 */
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+    </style>
+</head> 
+<body>  
+    <!-- Wi-Works 로고 (타이틀과 화면 상단 중간) -->
+    <div class="logo-container">
+        <img src="wiworkslogo.png" alt="wi-works logo">
+    </div>
+
+    <!-- 중간: 콘텐츠와 버튼 -->
+    <div class="content-container">
+        <div class="title">Wi-Works 앱 설치</div>
+        <div class="description">Wi-Works를 설치하려면 사용 중인 OS에 맞는 버튼을 아래에서 선택하세요.</div>
+
+        <!-- iOS 버튼 -->
+        <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/wizione0610/wi-works/main/manifest.plist" 
+           class="download-button ios-button">
+            <img class="apple-logo" src="appleLogo.png" alt="Apple 로고">
+            <span>Install for iOS</span>
+        </a>
+
+        <!-- Android 버튼 -->
+        <a href="http://wizione.com:48011/wi-works/api/v1/user/APKdownload?os=A" 
+           class="download-button android-button">
+            <img class="android-logo" src="androidLogo.png" alt="Android 로고">
+            <span>Install for Android</span>
+        </a>
+    </div>
+
+</body>
+</html>
