@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko"> 
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Works 설치</title>  
+    <style>
+        /* iOS 스타일 배경 그라디언트 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 상단에 로고를 고정 */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f0f5, #d6d6e0);
+            text-align: center;
+        }
+
+        /* 회사 로고 컨테이너 */
+        .logo-container {
+            margin-top: 50px; /* 상단 간격을 50px로 조정 */
+        }
+
+        .logo-container img {
+            height: 50px; /* 로고 크기 */
+        }
+
+        /* 중간 콘텐츠 컨테이너 */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 수직 중앙 정렬 */
+            align-items: center;
+            flex: 1; /* 화면의 중간 영역을 차지 */
+        }
+
+        /* iOS 스타일 다운로드 버튼 */
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px; /* 애플 로고와 텍스트 간격 */
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background-color: #000000; /* 검은색 배경 */
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 버튼 호버 효과 */
+        .download-button:hover {
+            background-color: #333333; /* 어두운 회색 */
+            transform: scale(1.05);
+        }
+
+        /* 애플 로고 스타일 */
+        .apple-logo {
+            font-size: 26px;
+        }
+
+        /* iOS 스타일 타이틀 */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* 설명 문구 */
+        .description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 0 15px; /* iPhone 화면에서 여백 추가 */
+        }
+    </style>
+</head> 
+<body>  
+    <!-- 상단: 회사 로고 -->
+    <div class="logo-container">
+        <img src="wizioneLogo.png" alt="회사 로고">
+    </div>
+
+    <!-- 중간: 콘텐츠와 버튼 -->
+    <div class="content-container">
+        <div class="title">Wi-Works 앱 설치</div>
+        <div class="description">Wi-Works를 설치하려면 아래 버튼을 눌러주세요.</div>
+        <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/wizione0610/wi-works/main/manifest.plist" 
+           class="download-button">
+            <span class="apple-logo"></span> Install App
+        </a>
+    </div>
+</body>
+</html>
