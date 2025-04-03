@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>출퇴근 앱 사용 안내</title>
 
     <!-- ✅ Open Graph 메타 태그 (SNS & 메신저 링크 미리보기) -->
@@ -12,34 +12,44 @@
     <meta property="og:type" content="website">
 
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
             width: 100%;
-            max-width: 768px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #002e5a;
             color: #ffffff;
-            box-sizing: border-box;
+            line-height: 1.6;
+            word-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            padding: 1.5rem 1rem;
+        }
+
+        main {
+            max-width: 768px;
+            margin: 0 auto;
         }
 
         h1 {
             font-size: 1.75rem;
             margin-bottom: 1rem;
-            color: #ffffff;
         }
 
         h2 {
             font-size: 1.25rem;
             margin-top: 2rem;
-            color: #ffffff;
         }
 
         h3 {
             font-size: 1.1rem;
             margin-top: 1.2rem;
-            color: #ffffff;
         }
 
         p {
@@ -70,63 +80,80 @@
         .section {
             margin-bottom: 2rem;
         }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.15rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+            p, li {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>출퇴근 앱 사용 안내</h1>
-    <p>안녕하세요.<br>
-    오늘부터 출퇴근 기록은 모바일 앱을 통해 진행됩니다.<br>
-    모든 직원분께서는 앱을 설치하고 회원가입한 뒤 사용해 주세요.</p>
+    <main>
+        <h1>출퇴근 앱 사용 안내</h1>
+        <p>안녕하세요.<br>
+        오늘부터 출퇴근 기록은 모바일 앱을 통해 진행됩니다.<br>
+        모든 직원분께서는 앱을 설치하고 회원가입한 뒤 사용해 주세요.</p>
 
-    <div class="section">
-        <h2>출퇴근 기록 방법</h2>
-        <ul>
-            <li>출퇴근 시 ‘출퇴근’ 버튼을 눌러 기록해 주세요.</li>
-            <li>출근지가 아닌 곳에서 출근하거나, 조퇴, 반차, 앱 오류 등의 사유로 인해 비정상적인 출퇴근이 발생할 경우 사유 입력 팝업이 표시됩니다. 해당 팝업에서 사유를 작성해 주세요.</li>
-            <li>출근 후 외근을 가실 경우 ‘외근’ 버튼을 눌러 기록해 주세요.</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>출퇴근 기록 방법</h2>
+            <ul>
+                <li>출퇴근 시 ‘출퇴근’ 버튼을 눌러 기록해 주세요.</li>
+                <li>출근지가 아닌 곳에서 출근하거나, 조퇴, 반차, 앱 오류 등의 사유로 인해 비정상적인 출퇴근이 발생할 경우 사유 입력 팝업이 표시됩니다. 해당 팝업에서 사유를 작성해 주세요.</li>
+                <li>출근 후 외근을 가실 경우 ‘외근’ 버튼을 눌러 기록해 주세요.</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>앱 설치 안내</h2>
-        <p><strong>앱 설치 페이지:</strong> <a href="download.html" target="_blank">여기를 눌러 설치 페이지로 이동하세요</a></p>
+        <div class="section">
+            <h2>앱 설치 안내</h2>
+            <p><strong>앱 설치 페이지:</strong> <a href="download.html" target="_blank">여기를 눌러 설치 페이지로 이동하세요</a></p>
 
-        <h3>안드로이드 사용자</h3>
-        <ul>
-            <li>위 설치 페이지에서 앱을 다운로드하여 설치해 주세요.</li>
-        </ul>
+            <h3>안드로이드 사용자</h3>
+            <ul>
+                <li>위 설치 페이지에서 앱을 다운로드하여 설치해 주세요.</li>
+            </ul>
 
-        <h3>아이폰 사용자</h3>
-        <ul>
-            <li>애플 정책상 기기 등록 및 개발자 모드 설정이 필요합니다.</li>
-            <li>아래 UUID 확인 페이지에서 UUID를 확인한 후, 최우수 과장님께 UUID와 함께 기기 등록을 요청해 주세요.</li>
-            <li>만약 위 방법으로 UUID 확인이 어려우시면, 기기를 본사로 가져오신 후 최우수 과장님께 기기 등록을 요청해 주세요.</li>
-            <li>기기 등록은 1~3일 정도 소요되며, 등록 완료 후 설치 페이지에서 앱을 설치하고 개발자 모드를 활성화하여 사용하시면 됩니다.</li>
-            <li>방문하실 때 부재중일 수 있으므로 방문 전 미리 연락해 주시면 감사하겠습니다.</li>
-        </ul>
+            <h3>아이폰 사용자</h3>
+            <ul>
+                <li>애플 정책상 기기 등록 및 개발자 모드 설정이 필요합니다.</li>
+                <li>아래 UUID 확인 페이지에서 UUID를 확인한 후, 최우수 과장님께 UUID와 함께 기기 등록을 요청해 주세요.</li>
+                <li>만약 위 방법으로 UUID 확인이 어려우시면, 기기를 본사로 가져오신 후 최우수 과장님께 기기 등록을 요청해 주세요.</li>
+                <li>기기 등록은 1~3일 정도 소요되며, 등록 완료 후 설치 페이지에서 앱을 설치하고 개발자 모드를 활성화하여 사용하시면 됩니다.</li>
+                <li>방문하실 때 부재중일 수 있으므로 방문 전 미리 연락해 주시면 감사하겠습니다.</li>
+            </ul>
 
-        <p><strong>UUID 확인(iOS)</strong></p>
-        <ul>
-            <li>UUID 확인 페이지: <a href="https://udid.io" target="_blank">https://udid.io</a></li>
-            <li>확인 방법 이미지: <a href="https://raw.githubusercontent.com/wizione0610/wi-works/main/uuidGuide.jpg" target="_blank">UUID 확인 방법 보기</a></li>
-        </ul>
+            <p><strong>UUID 확인(iOS)</strong></p>
+            <ul>
+                <li>UUID 확인 페이지: <a href="https://udid.io" target="_blank">https://udid.io</a></li>
+                <li>확인 방법 이미지: <a href="https://raw.githubusercontent.com/wizione0610/wi-works/main/uuidGuide.jpg" target="_blank">UUID 확인 방법 보기</a></li>
+            </ul>
 
-        <p><strong>개발자 모드 활성화(iOS)</strong></p>
-        <ul>
-            <li><a href="https://raw.githubusercontent.com/wizione0610/wi-works/main/developerMode.png" target="_blank">개발자 모드 설정 방법 보기</a></li>
-        </ul>
-    </div>
+            <p><strong>개발자 모드 활성화(iOS)</strong></p>
+            <ul>
+                <li><a href="https://raw.githubusercontent.com/wizione0610/wi-works/main/developerMode.png" target="_blank">개발자 모드 설정 방법 보기</a></li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>위치정보 안내</h2>
-        <p>위치정보는 출퇴근 시 근무지 내에 있는지 확인하는 용도로만 사용됩니다.<br>
-        별도로 저장하거나 서버로 전송하지 않으므로 안심하고 이용해 주세요.</p>
-    </div>
+        <div class="section">
+            <h2>위치정보 안내</h2>
+            <p>위치정보는 출퇴근 시 근무지 내에 있는지 확인하는 용도로만 사용됩니다.<br>
+            별도로 저장하거나 서버로 전송하지 않으므로 안심하고 이용해 주세요.</p>
+        </div>
 
-    <div class="section">
-        <h2>문의사항</h2>
-        <p>앱 사용 중 문제가 발생하면 최우수 과장님께 문의해 주세요.<br>
-        감사합니다.</p>
-    </div>
+        <div class="section">
+            <h2>문의사항</h2>
+            <p>앱 사용 중 문제가 발생하면 최우수 과장님께 문의해 주세요.<br>
+            감사합니다.</p>
+        </div>
+    </main>
 </body>
 </html>
